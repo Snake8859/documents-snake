@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>绪论 | Snake8859</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/snake.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Snake8859的文档和个人笔记">
+    <link rel="preload" href="/assets/css/0.styles.096ead02.css" as="style"><link rel="preload" href="/assets/js/app.02e74a2b.js" as="script"><link rel="preload" href="/assets/js/2.57c6d2f7.js" as="script"><link rel="preload" href="/assets/js/19.86d202ed.js" as="script"><link rel="prefetch" href="/assets/js/10.c2699515.js"><link rel="prefetch" href="/assets/js/100.e57e7729.js"><link rel="prefetch" href="/assets/js/101.baa01a63.js"><link rel="prefetch" href="/assets/js/102.1453dcb5.js"><link rel="prefetch" href="/assets/js/103.48c119dd.js"><link rel="prefetch" href="/assets/js/104.550d240d.js"><link rel="prefetch" href="/assets/js/105.b1180861.js"><link rel="prefetch" href="/assets/js/106.c5ccb84e.js"><link rel="prefetch" href="/assets/js/107.9682dff2.js"><link rel="prefetch" href="/assets/js/108.f1e82505.js"><link rel="prefetch" href="/assets/js/109.3598962f.js"><link rel="prefetch" href="/assets/js/11.53f16f31.js"><link rel="prefetch" href="/assets/js/110.15fe31e1.js"><link rel="prefetch" href="/assets/js/111.a0b10664.js"><link rel="prefetch" href="/assets/js/112.d3939d20.js"><link rel="prefetch" href="/assets/js/113.46e4835a.js"><link rel="prefetch" href="/assets/js/114.e55e2fb3.js"><link rel="prefetch" href="/assets/js/115.e06faf79.js"><link rel="prefetch" href="/assets/js/12.3c132a0b.js"><link rel="prefetch" href="/assets/js/13.41791305.js"><link rel="prefetch" href="/assets/js/14.cc4eaec7.js"><link rel="prefetch" href="/assets/js/15.4f4f189f.js"><link rel="prefetch" href="/assets/js/16.af6aed74.js"><link rel="prefetch" href="/assets/js/17.c8762897.js"><link rel="prefetch" href="/assets/js/18.c5dc67b3.js"><link rel="prefetch" href="/assets/js/20.e4189130.js"><link rel="prefetch" href="/assets/js/21.c7811963.js"><link rel="prefetch" href="/assets/js/22.d82eb4ed.js"><link rel="prefetch" href="/assets/js/23.5548e03a.js"><link rel="prefetch" href="/assets/js/24.8aad1281.js"><link rel="prefetch" href="/assets/js/25.356cd371.js"><link rel="prefetch" href="/assets/js/26.0a3dcd9a.js"><link rel="prefetch" href="/assets/js/27.08050082.js"><link rel="prefetch" href="/assets/js/28.fb22042e.js"><link rel="prefetch" href="/assets/js/29.03fccaf0.js"><link rel="prefetch" href="/assets/js/3.bde541ac.js"><link rel="prefetch" href="/assets/js/30.60a56dab.js"><link rel="prefetch" href="/assets/js/31.987d12a2.js"><link rel="prefetch" href="/assets/js/32.1adb2c8c.js"><link rel="prefetch" href="/assets/js/33.2108f876.js"><link rel="prefetch" href="/assets/js/34.cb778d11.js"><link rel="prefetch" href="/assets/js/35.bbf509e8.js"><link rel="prefetch" href="/assets/js/36.4378233a.js"><link rel="prefetch" href="/assets/js/37.0ae1fe21.js"><link rel="prefetch" href="/assets/js/38.51659462.js"><link rel="prefetch" href="/assets/js/39.26983312.js"><link rel="prefetch" href="/assets/js/4.de92bf2f.js"><link rel="prefetch" href="/assets/js/40.e7ac011c.js"><link rel="prefetch" href="/assets/js/41.b38b59a9.js"><link rel="prefetch" href="/assets/js/42.f13536bc.js"><link rel="prefetch" href="/assets/js/43.20016372.js"><link rel="prefetch" href="/assets/js/44.df5cefde.js"><link rel="prefetch" href="/assets/js/45.7f2bd9f7.js"><link rel="prefetch" href="/assets/js/46.6572ecd2.js"><link rel="prefetch" href="/assets/js/47.29c01931.js"><link rel="prefetch" href="/assets/js/48.c5d50761.js"><link rel="prefetch" href="/assets/js/49.eedeb413.js"><link rel="prefetch" href="/assets/js/5.d35fae6e.js"><link rel="prefetch" href="/assets/js/50.668aed89.js"><link rel="prefetch" href="/assets/js/51.fabbb73f.js"><link rel="prefetch" href="/assets/js/52.40199eb6.js"><link rel="prefetch" href="/assets/js/53.04341370.js"><link rel="prefetch" href="/assets/js/54.1ea7a647.js"><link rel="prefetch" href="/assets/js/55.d9a29e16.js"><link rel="prefetch" href="/assets/js/56.5a212b0d.js"><link rel="prefetch" href="/assets/js/57.557b132e.js"><link rel="prefetch" href="/assets/js/58.57f63c23.js"><link rel="prefetch" href="/assets/js/59.f9868ad9.js"><link rel="prefetch" href="/assets/js/6.cbbecb9e.js"><link rel="prefetch" href="/assets/js/60.d715511d.js"><link rel="prefetch" href="/assets/js/61.94f23e53.js"><link rel="prefetch" href="/assets/js/62.b9d0cd87.js"><link rel="prefetch" href="/assets/js/63.430b0804.js"><link rel="prefetch" href="/assets/js/64.64115894.js"><link rel="prefetch" href="/assets/js/65.862c29a4.js"><link rel="prefetch" href="/assets/js/66.1d742c87.js"><link rel="prefetch" href="/assets/js/67.85f2fac8.js"><link rel="prefetch" href="/assets/js/68.5433d095.js"><link rel="prefetch" href="/assets/js/69.4e1e27a1.js"><link rel="prefetch" href="/assets/js/7.58204c03.js"><link rel="prefetch" href="/assets/js/70.5ea3a9d1.js"><link rel="prefetch" href="/assets/js/71.76670aca.js"><link rel="prefetch" href="/assets/js/72.709e8ea7.js"><link rel="prefetch" href="/assets/js/73.36be2c03.js"><link rel="prefetch" href="/assets/js/74.3846c884.js"><link rel="prefetch" href="/assets/js/75.7645483b.js"><link rel="prefetch" href="/assets/js/76.fd3c307b.js"><link rel="prefetch" href="/assets/js/77.7be1ab20.js"><link rel="prefetch" href="/assets/js/78.32ab0068.js"><link rel="prefetch" href="/assets/js/79.efbbf8ab.js"><link rel="prefetch" href="/assets/js/8.abd032fa.js"><link rel="prefetch" href="/assets/js/80.9f10b4c0.js"><link rel="prefetch" href="/assets/js/81.451f32ee.js"><link rel="prefetch" href="/assets/js/82.722cb36d.js"><link rel="prefetch" href="/assets/js/83.f9528af6.js"><link rel="prefetch" href="/assets/js/84.47c73bff.js"><link rel="prefetch" href="/assets/js/85.b01e8c4a.js"><link rel="prefetch" href="/assets/js/86.c88eff6b.js"><link rel="prefetch" href="/assets/js/87.870c1ca3.js"><link rel="prefetch" href="/assets/js/88.1096db0d.js"><link rel="prefetch" href="/assets/js/89.9cc7fb66.js"><link rel="prefetch" href="/assets/js/9.5bf26188.js"><link rel="prefetch" href="/assets/js/90.e1df3db6.js"><link rel="prefetch" href="/assets/js/91.b58c4d10.js"><link rel="prefetch" href="/assets/js/92.f969419b.js"><link rel="prefetch" href="/assets/js/93.8490ac72.js"><link rel="prefetch" href="/assets/js/94.7d04723c.js"><link rel="prefetch" href="/assets/js/95.953295d7.js"><link rel="prefetch" href="/assets/js/96.4523f191.js"><link rel="prefetch" href="/assets/js/97.1f861b1b.js"><link rel="prefetch" href="/assets/js/98.86252b38.js"><link rel="prefetch" href="/assets/js/99.6c922fe1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.096ead02.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Snake8859</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link router-link-active">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link router-link-active">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>模式识别导论</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/AI/PR/" class="sidebar-link">模式识别导论笔记</a></li><li><a href="/AI/PR/01introduction.html" class="active sidebar-link">绪论</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#人工智能" class="sidebar-link">人工智能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式识别" class="sidebar-link">模式识别</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#机器学习" class="sidebar-link">机器学习</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#数据挖掘" class="sidebar-link">数据挖掘</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#三者区别" class="sidebar-link">三者区别</a></li></ul></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式识别应用案例" class="sidebar-link">模式识别应用案例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#大方向" class="sidebar-link">大方向</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#具体案例" class="sidebar-link">具体案例</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#深度学习背景下案例" class="sidebar-link">深度学习背景下案例</a></li></ul></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式识别相关问题" class="sidebar-link">模式识别相关问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式描述" class="sidebar-link">模式描述</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式分类" class="sidebar-link">模式分类</a></li><li class="sidebar-sub-header"><a href="/AI/PR/01introduction.html#模式识别系统流程" class="sidebar-link">模式识别系统流程</a></li></ul></li></ul></li><li><a href="/AI/PR/02bayse.html" class="sidebar-link">贝叶斯决策理论</a></li><li><a href="/AI/PR/03pdf_estimation.html" class="sidebar-link">概率密度函数估计</a></li><li><a href="/AI/PR/04nonparametric_esimation.html" class="sidebar-link">非参数估计</a></li><li><a href="/AI/PR/05linear_discriminant_function.html" class="sidebar-link">线性判别函数</a></li><li><a href="/AI/PR/06ANN.html" class="sidebar-link">人工神经网络</a></li><li><a href="/AI/PR/07data_cluster.html" class="sidebar-link">数据聚类</a></li><li><a href="/AI/PR/08SVM.html" class="sidebar-link">SVM</a></li><li><a href="/AI/PR/09feature_extraction.html" class="sidebar-link">特征提取</a></li><li><a href="/AI/PR/10feature_transformation.html" class="sidebar-link">特征变换</a></li><li><a href="/AI/PR/11feature_selection.html" class="sidebar-link">特征选择</a></li><li><a href="/AI/PR/12decision_tree.html" class="sidebar-link">决策树</a></li><li><a href="/AI/PR/13target_detection.html" class="sidebar-link">模式识别典型应用——目标检测</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="绪论"><a href="#绪论" class="header-anchor">#</a> 绪论</h1> <h2 id="人工智能"><a href="#人工智能" class="header-anchor">#</a> 人工智能</h2> <p>人工智能=人工+智能</p> <p>人工智能是关于知识的学科，怎样表示、获取和应用知识；</p> <p>核心目标：让机器去完成只有人能够完成的<strong>智能工作。</strong></p> <p>人工智能所包含的体系：</p> <ul><li>模式识别</li> <li>机器学习</li> <li>数据挖掘</li> <li>计算机视觉</li> <li>自然语言处理</li></ul> <h3 id="模式识别"><a href="#模式识别" class="header-anchor">#</a> 模式识别</h3> <p>学术描述1：模式识别是人工智能的一个分支，其基本任务是从标记样本中训练识别系统或者从无标识样本中发现模式。</p> <p>学术描述2：模式是指存在于时间和空间中可观测性、可度量性和可区分性的信息；模式识别是对模式进行分析与处理， 进而实现描述、辨识、分类与解译。</p> <p>其他角度理解：</p> <ul><li>人和动物通过感知从周围环境获取信息。感知就是模式识别过程。</li> <li>使计算机模仿人的感知能力，从感知数据中提取信息（判别物体和行为、现象）的过程。</li></ul> <p>特性：</p> <ul><li>可观察性</li> <li>可区分性</li> <li>相似性</li></ul> <p><strong>基本概念理解</strong></p> <p>模式识别：确定一个样本的类别属性的过程，即把某一个样本归为多个类型中的某一个。</p> <p>模式：对研究对象（客体)的一种抽象化描述，是对客体的统称。【简单理解：每一个类组成模式】</p> <p>样本：一个具体的研究对象。一个样本必须量化或者结构化才能被计算机识别，这就是模式的特征。</p> <p>特征：能描述模式特征的量。</p> <p>模式分类是模式识别的核心研究内容，相关问题包括<strong>模式描述、特征提取、特征选择、聚类、分类器设计</strong>等。</p> <blockquote><p>模式分类取决于具体的数据对象，模式识别的研究内容还包括信号 /图像/视频理解、视觉目标分类、图像/视频检索、文本分类等，以及面向应用的技术研究。</p></blockquote> <blockquote><p>需要解决的几个问题</p> <ul><li><strong>如何特征提取（量化）？</strong></li> <li><strong>如何特征选择？</strong></li> <li><strong>如何选择分类器？</strong></li> <li><strong>分类器训练过程与测试？</strong></li></ul></blockquote> <h3 id="机器学习"><a href="#机器学习" class="header-anchor">#</a> 机器学习</h3> <p>机器学习：专门研究计算机怎样模拟或实现人类的学习行为，以 获取新的知识或技能，并重新组织已有的知识结构使之不断改善自身的性能。</p> <p>解决的问题：</p> <ul><li>如何在经验学习中改善算法性能</li> <li>用数据或以往的经验，优化计算机程序的性能标准</li></ul> <h3 id="数据挖掘"><a href="#数据挖掘" class="header-anchor">#</a> 数据挖掘</h3> <h3 id="三者区别"><a href="#三者区别" class="header-anchor">#</a> 三者区别</h3> <p>机器学习，数据挖掘和模式识别三者区别，关系和理解？</p> <ul><li>机器学习侧重于学习模型的构建，强调从数据中学习，并最大化某个学习目标</li> <li>数据挖掘侧重于从无监督数据中发现未知的知识，强调其商业应用</li> <li>模式识别侧重于强调描述，解释和可视化一个特定的模式</li></ul> <img src="01introduction.assets/image-20201206143928761.png" alt="image-20201206143928761" style="zoom:67%;"> <img src="01introduction.assets/image-20201206143945954.png" alt="image-20201206143945954" style="zoom:67%;"> <h2 id="模式识别应用案例"><a href="#模式识别应用案例" class="header-anchor">#</a> 模式识别应用案例</h2> <h3 id="大方向"><a href="#大方向" class="header-anchor">#</a> 大方向</h3> <ul><li>安全监控</li> <li>舆情分析</li> <li>智能人机交互</li> <li>机器人环境感知</li> <li>人类健康</li> <li>空间探测与环境资源监测</li> <li>工业应用</li> <li>文档数字化</li> <li>交通分析</li> <li>网络搜索，信息提取和过滤</li></ul> <h3 id="具体案例"><a href="#具体案例" class="header-anchor">#</a> 具体案例</h3> <ul><li><p>生物特征识别</p> <img src="01introduction.assets/image-20201206144432022.png" alt="image-20201206144432022" style="zoom:50%;"></li> <li><p>视频监控</p> <img src="01introduction.assets/image-20201206144451669.png" alt="image-20201206144451669" style="zoom:50%;"></li> <li><p>可见光遥感图像地表分类</p> <img src="01introduction.assets/image-20201206144544417.png" alt="image-20201206144544417" style="zoom:50%;"></li> <li><p>高光谱遥感地表物质分类</p> <img src="01introduction.assets/image-20201206144600941.png" alt="image-20201206144600941" style="zoom:50%;"></li> <li><p>城市房屋分割</p> <img src="01introduction.assets/image-20201206144614661.png" alt="image-20201206144614661" style="zoom:50%;"></li> <li><p>医学图像分析</p> <img src="01introduction.assets/image-20201206144927204.png" alt="image-20201206144927204" style="zoom:50%;"></li> <li><p>车牌识别</p> <img src="01introduction.assets/image-20201206144938629.png" alt="image-20201206144938629" style="zoom:50%;"></li> <li><p>信函分拣</p> <img src="01introduction.assets/image-20201206144956704.png" alt="image-20201206144956704" style="zoom:50%;"></li> <li><p>图像识别</p> <img src="01introduction.assets/image-20201206145009155.png" alt="image-20201206145009155" style="zoom:50%;"></li> <li><p>精细目标分割</p> <img src="01introduction.assets/image-20201206145022282.png" alt="image-20201206145022282" style="zoom:50%;"></li> <li><p>语音识别</p> <img src="01introduction.assets/image-20201206145036508.png" alt="image-20201206145036508" style="zoom:50%;"></li></ul> <h3 id="深度学习背景下案例"><a href="#深度学习背景下案例" class="header-anchor">#</a> 深度学习背景下案例</h3> <ul><li><p>城市典型目标语义分割</p> <img src="01introduction.assets/image-20201206145116487.png" alt="image-20201206145116487" style="zoom:50%;"></li> <li><p>车辆目标检测</p> <img src="01introduction.assets/image-20201206145140404.png" alt="image-20201206145140404" style="zoom:50%;"></li> <li><p>行人再识别</p> <img src="01introduction.assets/image-20201206145206237.png" alt="image-20201206145206237" style="zoom:50%;"></li> <li><p>去云</p> <img src="01introduction.assets/image-20201206145222360.png" alt="image-20201206145222360" style="zoom:50%;"></li> <li><p>生成新图像</p> <img src="01introduction.assets/image-20201206145238895.png" alt="image-20201206145238895" style="zoom:50%;"></li> <li><p>智能驾驶</p> <img src="01introduction.assets/image-20201206145258047.png" alt="image-20201206145258047" style="zoom:50%;"></li> <li><p>图像句子描述</p> <img src="01introduction.assets/image-20201206145314742.png" alt="image-20201206145314742" style="zoom:50%;"></li></ul> <h2 id="模式识别相关问题"><a href="#模式识别相关问题" class="header-anchor">#</a> 模式识别相关问题</h2> <h3 id="模式描述"><a href="#模式描述" class="header-anchor">#</a> 模式描述</h3> <p>模式描述是将模式转化为向量表示的过程，即特征描述与特征提取。</p> <p>模式的两个层次：</p> <ul><li>样本（sample，instance，example）</li> <li>类别（class,category)</li></ul> <blockquote><p>例如：100个样本，10个类别</p></blockquote> <p>识别对象表示：特征</p> <h3 id="模式分类"><a href="#模式分类" class="header-anchor">#</a> 模式分类</h3> <p>模式识别核心技术为模式分类，即采用合适的分类器对模式进行分类。</p> <p>分类器表示：</p> <ul><li>判别模型</li> <li>生成模型</li></ul> <img src="01introduction.assets/image-20201206151237545.png" alt="image-20201206151237545" style="zoom:50%;"> <p>学习方法分类：</p> <ul><li>监督学习：训练样本有类别标签</li> <li>无监督学习：训练样本无标签，主要得到数据结构表示或分布</li> <li>半监督学习：训练样本一部分有类别，一部分没有</li> <li>增强学习：学习过程中给出奖惩信号</li> <li>自适应学习：测试样本分布发生变化，分类器参数自适应</li></ul> <blockquote><p>以两类鱼分类为例子，来描述模式描述和模式分类过程。</p> <p>两类鱼：</p> <ul><li>Sea bass （黑鲈）</li> <li>Salmon（三文鱼）</li></ul> <ol><li><p>模式描述（特征提取）</p> <img src="01introduction.assets/image-20201206150516515.png" alt="image-20201206150516515" style="zoom:50%;"> <img src="01introduction.assets/image-20201206150532435.png" alt="image-20201206150532435" style="zoom:50%;"></li> <li><p>模式分类</p> <ul><li><p>线性分类器</p> <img src="01introduction.assets/image-20201206150555390.png" alt="image-20201206150555390" style="zoom:50%;"></li> <li><p>非线性分类器</p> <img src="01introduction.assets/image-20201206150611842.png" alt="image-20201206150611842" style="zoom:50%;"></li> <li><p>最近邻分类器</p> <img src="01introduction.assets/image-20201206150729820.png" alt="image-20201206150729820" style="zoom:50%;"></li></ul></li></ol></blockquote> <h3 id="模式识别系统流程"><a href="#模式识别系统流程" class="header-anchor">#</a> 模式识别系统流程</h3> <p>整体过程：</p> <img src="01introduction.assets/image-20201206150800455.png" alt="image-20201206150800455" style="zoom:50%;"> <p>分类器训练过程：</p> <img src="01introduction.assets/image-20201206150842265.png" alt="image-20201206150842265" style="zoom:50%;"> <p>分类器训练与测试:</p> <img src="01introduction.assets/image-20201206150910368.png" alt="image-20201206150910368" style="zoom:50%;"></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/AI/PR/" class="prev router-link-active">
+        模式识别导论笔记
+      </a></span> <span class="next"><a href="/AI/PR/02bayse.html">
+        贝叶斯决策理论
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02e74a2b.js" defer></script><script src="/assets/js/2.57c6d2f7.js" defer></script><script src="/assets/js/19.86d202ed.js" defer></script>
+  </body>
+</html>

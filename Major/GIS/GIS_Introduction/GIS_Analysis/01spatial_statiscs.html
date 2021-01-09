@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>空间统计分析基础 | Snake8859</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/snake.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Snake8859的文档和个人笔记">
+    <link rel="preload" href="/assets/css/0.styles.096ead02.css" as="style"><link rel="preload" href="/assets/js/app.02e74a2b.js" as="script"><link rel="preload" href="/assets/js/2.57c6d2f7.js" as="script"><link rel="preload" href="/assets/js/67.85f2fac8.js" as="script"><link rel="prefetch" href="/assets/js/10.c2699515.js"><link rel="prefetch" href="/assets/js/100.e57e7729.js"><link rel="prefetch" href="/assets/js/101.baa01a63.js"><link rel="prefetch" href="/assets/js/102.1453dcb5.js"><link rel="prefetch" href="/assets/js/103.48c119dd.js"><link rel="prefetch" href="/assets/js/104.550d240d.js"><link rel="prefetch" href="/assets/js/105.b1180861.js"><link rel="prefetch" href="/assets/js/106.c5ccb84e.js"><link rel="prefetch" href="/assets/js/107.9682dff2.js"><link rel="prefetch" href="/assets/js/108.f1e82505.js"><link rel="prefetch" href="/assets/js/109.3598962f.js"><link rel="prefetch" href="/assets/js/11.53f16f31.js"><link rel="prefetch" href="/assets/js/110.15fe31e1.js"><link rel="prefetch" href="/assets/js/111.a0b10664.js"><link rel="prefetch" href="/assets/js/112.d3939d20.js"><link rel="prefetch" href="/assets/js/113.46e4835a.js"><link rel="prefetch" href="/assets/js/114.e55e2fb3.js"><link rel="prefetch" href="/assets/js/115.e06faf79.js"><link rel="prefetch" href="/assets/js/12.3c132a0b.js"><link rel="prefetch" href="/assets/js/13.41791305.js"><link rel="prefetch" href="/assets/js/14.cc4eaec7.js"><link rel="prefetch" href="/assets/js/15.4f4f189f.js"><link rel="prefetch" href="/assets/js/16.af6aed74.js"><link rel="prefetch" href="/assets/js/17.c8762897.js"><link rel="prefetch" href="/assets/js/18.c5dc67b3.js"><link rel="prefetch" href="/assets/js/19.86d202ed.js"><link rel="prefetch" href="/assets/js/20.e4189130.js"><link rel="prefetch" href="/assets/js/21.c7811963.js"><link rel="prefetch" href="/assets/js/22.d82eb4ed.js"><link rel="prefetch" href="/assets/js/23.5548e03a.js"><link rel="prefetch" href="/assets/js/24.8aad1281.js"><link rel="prefetch" href="/assets/js/25.356cd371.js"><link rel="prefetch" href="/assets/js/26.0a3dcd9a.js"><link rel="prefetch" href="/assets/js/27.08050082.js"><link rel="prefetch" href="/assets/js/28.fb22042e.js"><link rel="prefetch" href="/assets/js/29.03fccaf0.js"><link rel="prefetch" href="/assets/js/3.bde541ac.js"><link rel="prefetch" href="/assets/js/30.60a56dab.js"><link rel="prefetch" href="/assets/js/31.987d12a2.js"><link rel="prefetch" href="/assets/js/32.1adb2c8c.js"><link rel="prefetch" href="/assets/js/33.2108f876.js"><link rel="prefetch" href="/assets/js/34.cb778d11.js"><link rel="prefetch" href="/assets/js/35.bbf509e8.js"><link rel="prefetch" href="/assets/js/36.4378233a.js"><link rel="prefetch" href="/assets/js/37.0ae1fe21.js"><link rel="prefetch" href="/assets/js/38.51659462.js"><link rel="prefetch" href="/assets/js/39.26983312.js"><link rel="prefetch" href="/assets/js/4.de92bf2f.js"><link rel="prefetch" href="/assets/js/40.e7ac011c.js"><link rel="prefetch" href="/assets/js/41.b38b59a9.js"><link rel="prefetch" href="/assets/js/42.f13536bc.js"><link rel="prefetch" href="/assets/js/43.20016372.js"><link rel="prefetch" href="/assets/js/44.df5cefde.js"><link rel="prefetch" href="/assets/js/45.7f2bd9f7.js"><link rel="prefetch" href="/assets/js/46.6572ecd2.js"><link rel="prefetch" href="/assets/js/47.29c01931.js"><link rel="prefetch" href="/assets/js/48.c5d50761.js"><link rel="prefetch" href="/assets/js/49.eedeb413.js"><link rel="prefetch" href="/assets/js/5.d35fae6e.js"><link rel="prefetch" href="/assets/js/50.668aed89.js"><link rel="prefetch" href="/assets/js/51.fabbb73f.js"><link rel="prefetch" href="/assets/js/52.40199eb6.js"><link rel="prefetch" href="/assets/js/53.04341370.js"><link rel="prefetch" href="/assets/js/54.1ea7a647.js"><link rel="prefetch" href="/assets/js/55.d9a29e16.js"><link rel="prefetch" href="/assets/js/56.5a212b0d.js"><link rel="prefetch" href="/assets/js/57.557b132e.js"><link rel="prefetch" href="/assets/js/58.57f63c23.js"><link rel="prefetch" href="/assets/js/59.f9868ad9.js"><link rel="prefetch" href="/assets/js/6.cbbecb9e.js"><link rel="prefetch" href="/assets/js/60.d715511d.js"><link rel="prefetch" href="/assets/js/61.94f23e53.js"><link rel="prefetch" href="/assets/js/62.b9d0cd87.js"><link rel="prefetch" href="/assets/js/63.430b0804.js"><link rel="prefetch" href="/assets/js/64.64115894.js"><link rel="prefetch" href="/assets/js/65.862c29a4.js"><link rel="prefetch" href="/assets/js/66.1d742c87.js"><link rel="prefetch" href="/assets/js/68.5433d095.js"><link rel="prefetch" href="/assets/js/69.4e1e27a1.js"><link rel="prefetch" href="/assets/js/7.58204c03.js"><link rel="prefetch" href="/assets/js/70.5ea3a9d1.js"><link rel="prefetch" href="/assets/js/71.76670aca.js"><link rel="prefetch" href="/assets/js/72.709e8ea7.js"><link rel="prefetch" href="/assets/js/73.36be2c03.js"><link rel="prefetch" href="/assets/js/74.3846c884.js"><link rel="prefetch" href="/assets/js/75.7645483b.js"><link rel="prefetch" href="/assets/js/76.fd3c307b.js"><link rel="prefetch" href="/assets/js/77.7be1ab20.js"><link rel="prefetch" href="/assets/js/78.32ab0068.js"><link rel="prefetch" href="/assets/js/79.efbbf8ab.js"><link rel="prefetch" href="/assets/js/8.abd032fa.js"><link rel="prefetch" href="/assets/js/80.9f10b4c0.js"><link rel="prefetch" href="/assets/js/81.451f32ee.js"><link rel="prefetch" href="/assets/js/82.722cb36d.js"><link rel="prefetch" href="/assets/js/83.f9528af6.js"><link rel="prefetch" href="/assets/js/84.47c73bff.js"><link rel="prefetch" href="/assets/js/85.b01e8c4a.js"><link rel="prefetch" href="/assets/js/86.c88eff6b.js"><link rel="prefetch" href="/assets/js/87.870c1ca3.js"><link rel="prefetch" href="/assets/js/88.1096db0d.js"><link rel="prefetch" href="/assets/js/89.9cc7fb66.js"><link rel="prefetch" href="/assets/js/9.5bf26188.js"><link rel="prefetch" href="/assets/js/90.e1df3db6.js"><link rel="prefetch" href="/assets/js/91.b58c4d10.js"><link rel="prefetch" href="/assets/js/92.f969419b.js"><link rel="prefetch" href="/assets/js/93.8490ac72.js"><link rel="prefetch" href="/assets/js/94.7d04723c.js"><link rel="prefetch" href="/assets/js/95.953295d7.js"><link rel="prefetch" href="/assets/js/96.4523f191.js"><link rel="prefetch" href="/assets/js/97.1f861b1b.js"><link rel="prefetch" href="/assets/js/98.86252b38.js"><link rel="prefetch" href="/assets/js/99.6c922fe1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.096ead02.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Snake8859</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link router-link-active">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link router-link-active">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>空间分析</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/" class="sidebar-link">空间分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html" class="active sidebar-link">空间统计分析基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#前言" class="sidebar-link">前言</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#基于经典统计方法的（空间）分析步骤" class="sidebar-link">基于经典统计方法的（空间）分析步骤</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#空间数据类型" class="sidebar-link">空间数据类型</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#空间坐标" class="sidebar-link">空间坐标</a></li></ul></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#基础统计知识" class="sidebar-link">基础统计知识</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#概率与概率分布" class="sidebar-link">概率与概率分布</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#相关分析" class="sidebar-link">相关分析</a></li></ul></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#矢量数据分析" class="sidebar-link">矢量数据分析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#矢量数据模型" class="sidebar-link">矢量数据模型</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html#矢量分析主要思路与操作方法" class="sidebar-link">矢量分析主要思路与操作方法</a></li></ul></li></ul></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/02cluster_analysis.html" class="sidebar-link">聚类分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html" class="sidebar-link">元胞自动机</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/04random_filed_and_spatial_correlation.html" class="sidebar-link">随机场的空间相关</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/05variation_function.html" class="sidebar-link">变差函数和结构分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/06kriging_interpolation.html" class="sidebar-link">克里金插值</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="空间统计分析基础"><a href="#空间统计分析基础" class="header-anchor">#</a> 空间统计分析基础</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>空间分析是用来分析空间/地理对象的几何，拓扑和属性数据方法</p> <ul><li><p>通常是一般统计方法在分析地理(空间)问题上的扩展</p></li> <li><p>地理(空间)现象通常具有位置(显式/隐式)和相对位置关系(拓扑)</p></li> <li><p>地理(空间)问题的研究通常是位置和位置关系依赖的</p></li> <li><p>需要在一般统计方法上发展针对数据位置信息进行处理</p></li> <li><p>分析的结果通常也是位置和位置关系相关的-(时)空间模式</p></li></ul> <blockquote><p>总体来看, 空间分析的处理过程与一般统计方法是一致的</p></blockquote> <h3 id="基于经典统计方法的（空间）分析步骤"><a href="#基于经典统计方法的（空间）分析步骤" class="header-anchor">#</a> 基于经典统计方法的（空间）分析步骤</h3> <ul><li>研究问题的提出</li> <li>数据的收集与处理</li> <li>探索性分析</li> <li>确定假设（猜测）</li> <li>建模和检验</li> <li>统计结果分析</li> <li>结果呈现与问题结论描述</li></ul> <blockquote><p>优先考虑数据类型，数据表达方式，数据的位置</p></blockquote> <h3 id="空间数据类型"><a href="#空间数据类型" class="header-anchor">#</a> 空间数据类型</h3> <blockquote><p>MAUP现象</p> <ul><li>尺度和分区不一样</li></ul> <p>导致结论不一样</p></blockquote> <h3 id="空间坐标"><a href="#空间坐标" class="header-anchor">#</a> 空间坐标</h3> <h2 id="基础统计知识"><a href="#基础统计知识" class="header-anchor">#</a> 基础统计知识</h2> <h3 id="概率与概率分布"><a href="#概率与概率分布" class="header-anchor">#</a> 概率与概率分布</h3> <p>概率(Probability)-是对一个(随机)事件发生的可能性的度量，一般用0到1之 间的实数表示，0-绝对不会发生，1-一定会发生。</p> <p>概率密度函数(Probability density function, PDF)-刻画连续型随机变量 取不同值的相对可能性大小(relative likelihood) 。</p> <p>概率质量函数(Probability mass function，PMF)-用于刻画离散型随机变 量取值的相对可能性 。</p> <p><img src="D:/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90/%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8B%86%E5%88%86%EF%BC%89/images/%E6%A6%82%E7%8E%87%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B0.jpg" alt="概率密度函数"></p> <blockquote><p>概率密度函数的特点：</p> <ul><li><p>积分为1</p> <p>概率密度可以大于1，保证积分为1即可</p></li></ul></blockquote> <p><strong>大概率小事件 vs 小概率大事件</strong></p> <p><strong>随机变量的数字特征</strong></p> <p>实际问题的概率分布通常很难缺点，利用数字特征来刻画随机变量的特点，通过样本对概率总体进行估计。</p> <ul><li><p>样本均值（Mean）</p></li> <li><p>样本方差（Sample variance）</p></li> <li><p>中位数</p></li> <li><p>分位数</p></li></ul> <p><strong>点估计与区间估计</strong></p> <p>点估计是对总体特征参数给出单值的最佳估计。</p> <p>区间估计是给出参数的可能值区间，称置信区间和可信区间。</p> <blockquote><p>基于t分布的区间估计</p> <p><img src="D:/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90/%E7%AC%94%E8%AE%B0%EF%BC%88%E6%8B%86%E5%88%86%EF%BC%89/images/t%E5%88%86%E5%B8%83%E7%9A%84%E5%8C%BA%E9%97%B4%E4%BC%B0%E8%AE%A1.jpg" alt="t分布的区间估计"></p> <p>基于Bootstrapping区间估计</p> <ul><li>Bootstrapping-利用样本资料经多次重复(有放回)随机抽样而产生的新样本进行分别计 算，并由计算结果的分布给出置信区间的估计</li></ul></blockquote> <p><strong>描述统计：boxplot</strong></p> <img src="01spatial_statiscs.assets/boxplot.jpg" alt="boxplot" style="zoom:80%;"> <blockquote><p>首先观测中位数（Median），看1/4位数和3/4位数，以及两者范围（长度）即为IQR，再两根线段，是由中位数×1.5IOR延申，最后在外面的数据是无效值。</p></blockquote> <p><strong>统计假设检验/显著性检验</strong></p> <p><strong>参数检验和非参数检验（假设检验）</strong></p> <ul><li>T检验</li> <li>Z得分（检验）</li> <li>U检验（秩检验）</li> <li>正态性校验</li></ul> <blockquote><p>案例</p></blockquote> <p><strong>效应量（Effect-Size）</strong></p> <p>P值定性描述差异性，效应量定量描述差异的大小。</p> <p><strong>贝叶斯——T检验</strong></p> <h3 id="相关分析"><a href="#相关分析" class="header-anchor">#</a> 相关分析</h3> <p>相关分析（Corrleation）测试随机变量直接的统计依赖性（dependence）</p> <blockquote><p>相关系数定量给出相关性的大小</p> <p>相关性不能用于推断变量之间的因果关系</p></blockquote> <p><strong><code>Pearson's r</code>相关系数：<strong>一种参数方法，衡量变量之间的</strong>线性相关性</strong>，反映整个样本的平均响应。</p> <blockquote><p>论文表达：A与B存在显著的正线性相关（p&lt;0.01，R=0.9）</p> <p>【描述现象和数学表达，即要显著性和相关性】</p></blockquote> <p><strong>秩相关Spearman's rho</strong>：是一种测试统计依赖性的非参数 方法，适用于连续与离散型变量，刻画的是随机变量之间的单调（monotonic） 关系，测量的是样本对应排序的响应，<strong>与绝对值大小无关，对异常值不敏感</strong></p> <h2 id="矢量数据分析"><a href="#矢量数据分析" class="header-anchor">#</a> 矢量数据分析</h2> <h3 id="矢量数据模型"><a href="#矢量数据模型" class="header-anchor">#</a> 矢量数据模型</h3> <p>矢量数据模型，是一种离散对象模型，在空间参照系统中，采用点及其<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>z</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(x,y,z)</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span>坐标将离散的空间要素表示为点，线，面等几何对象，并将几何对象及其空间分析组织成方便计算机数据处理的空间文件或者空间数据库。</p> <blockquote><p>OGC Simale Feature模型</p> <p>拓扑数据结构</p> <p>不规则三角网模型（Delaunay TIN）</p> <p>网络模型(图论)</p></blockquote> <h4 id="不规则三角网"><a href="#不规则三角网" class="header-anchor">#</a> 不规则三角网</h4> <p>不规则三角网（ TIN ），用一组互不重叠的三角形来近 似表示地形或曲面的矢量数据格式。通常TIN由点图层 生成，每个点都与其最邻近点连接，且三角形尽量密集排列的原则，有时TIN还可以增加隔断线等约束条件。</p> <blockquote><p>规则</p> <ol><li>任何一个三角形的外接圆内不能包含任何其他离散点</li> <li>最小角最大准则：相邻两个三角形构成凸四边形，在交换对角线之后，六个内角的最小者不再增大</li></ol></blockquote> <img src="01spatial_statiscs.assets/image-20201030083915349.png" alt="image-20201030083915349" style="zoom:80%;"> <p>TIN也是一个矢量拓扑数据结构，内含节点（node），边（edge），三角形（face）</p> <p>基本数据：</p> <ul><li>点高程</li> <li>三角网</li> <li>面片</li></ul> <p>派生数据：</p> <ul><li>等高线</li> <li>面片坡度，坡向</li></ul> <h3 id="矢量分析主要思路与操作方法"><a href="#矢量分析主要思路与操作方法" class="header-anchor">#</a> 矢量分析主要思路与操作方法</h3> <p>首先确保空间对象具有统一空间参考系统，然后接下分析空间对象自身的几何特性，空间对象之间的位置关系，几何运算，随后分析空间数据图层之间的叠置分析。</p> <ul><li><p>空间对象的测度指标</p> <p>最小外接矩形：Minimum Boundary Box</p> <p>最大内切圆：Maximum Volume Inscribed Ellipsoid</p> <p>缓冲区：Buffer</p> <p>长度</p> <p>质心</p> <p>周长，面积</p> <p>分区</p></li> <li><p>空间对象之间的关系度量</p> <p>距离量测，取决于坐标系或者数据组织方式，如/平面坐标系的欧式距离，球面坐标系的大圆弧，线性空间中两点距离（路径）</p> <ul><li><p>大圆弧距离</p></li> <li><p>成本距离</p> <p>考虑阻抗因子</p></li></ul></li> <li><p>线性参考系统（网络模型与位置服务）</p></li> <li><p>数据探查分析</p> <ul><li>采样方案</li> <li>可视化分析</li></ul></li></ul> <p>【未完待续，部分内容】</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Major/GIS/GIS_Introduction/GIS_Analysis/" class="prev router-link-active">
+        空间分析
+      </a></span> <span class="next"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/02cluster_analysis.html">
+        聚类分析
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02e74a2b.js" defer></script><script src="/assets/js/2.57c6d2f7.js" defer></script><script src="/assets/js/67.85f2fac8.js" defer></script>
+  </body>
+</html>

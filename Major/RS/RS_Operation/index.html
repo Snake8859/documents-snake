@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>遥感图像处理方法 | Snake8859</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/snake.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Snake8859的文档和个人笔记">
+    <link rel="preload" href="/assets/css/0.styles.096ead02.css" as="style"><link rel="preload" href="/assets/js/app.02e74a2b.js" as="script"><link rel="preload" href="/assets/js/2.57c6d2f7.js" as="script"><link rel="preload" href="/assets/js/110.15fe31e1.js" as="script"><link rel="prefetch" href="/assets/js/10.c2699515.js"><link rel="prefetch" href="/assets/js/100.e57e7729.js"><link rel="prefetch" href="/assets/js/101.baa01a63.js"><link rel="prefetch" href="/assets/js/102.1453dcb5.js"><link rel="prefetch" href="/assets/js/103.48c119dd.js"><link rel="prefetch" href="/assets/js/104.550d240d.js"><link rel="prefetch" href="/assets/js/105.b1180861.js"><link rel="prefetch" href="/assets/js/106.c5ccb84e.js"><link rel="prefetch" href="/assets/js/107.9682dff2.js"><link rel="prefetch" href="/assets/js/108.f1e82505.js"><link rel="prefetch" href="/assets/js/109.3598962f.js"><link rel="prefetch" href="/assets/js/11.53f16f31.js"><link rel="prefetch" href="/assets/js/111.a0b10664.js"><link rel="prefetch" href="/assets/js/112.d3939d20.js"><link rel="prefetch" href="/assets/js/113.46e4835a.js"><link rel="prefetch" href="/assets/js/114.e55e2fb3.js"><link rel="prefetch" href="/assets/js/115.e06faf79.js"><link rel="prefetch" href="/assets/js/12.3c132a0b.js"><link rel="prefetch" href="/assets/js/13.41791305.js"><link rel="prefetch" href="/assets/js/14.cc4eaec7.js"><link rel="prefetch" href="/assets/js/15.4f4f189f.js"><link rel="prefetch" href="/assets/js/16.af6aed74.js"><link rel="prefetch" href="/assets/js/17.c8762897.js"><link rel="prefetch" href="/assets/js/18.c5dc67b3.js"><link rel="prefetch" href="/assets/js/19.86d202ed.js"><link rel="prefetch" href="/assets/js/20.e4189130.js"><link rel="prefetch" href="/assets/js/21.c7811963.js"><link rel="prefetch" href="/assets/js/22.d82eb4ed.js"><link rel="prefetch" href="/assets/js/23.5548e03a.js"><link rel="prefetch" href="/assets/js/24.8aad1281.js"><link rel="prefetch" href="/assets/js/25.356cd371.js"><link rel="prefetch" href="/assets/js/26.0a3dcd9a.js"><link rel="prefetch" href="/assets/js/27.08050082.js"><link rel="prefetch" href="/assets/js/28.fb22042e.js"><link rel="prefetch" href="/assets/js/29.03fccaf0.js"><link rel="prefetch" href="/assets/js/3.bde541ac.js"><link rel="prefetch" href="/assets/js/30.60a56dab.js"><link rel="prefetch" href="/assets/js/31.987d12a2.js"><link rel="prefetch" href="/assets/js/32.1adb2c8c.js"><link rel="prefetch" href="/assets/js/33.2108f876.js"><link rel="prefetch" href="/assets/js/34.cb778d11.js"><link rel="prefetch" href="/assets/js/35.bbf509e8.js"><link rel="prefetch" href="/assets/js/36.4378233a.js"><link rel="prefetch" href="/assets/js/37.0ae1fe21.js"><link rel="prefetch" href="/assets/js/38.51659462.js"><link rel="prefetch" href="/assets/js/39.26983312.js"><link rel="prefetch" href="/assets/js/4.de92bf2f.js"><link rel="prefetch" href="/assets/js/40.e7ac011c.js"><link rel="prefetch" href="/assets/js/41.b38b59a9.js"><link rel="prefetch" href="/assets/js/42.f13536bc.js"><link rel="prefetch" href="/assets/js/43.20016372.js"><link rel="prefetch" href="/assets/js/44.df5cefde.js"><link rel="prefetch" href="/assets/js/45.7f2bd9f7.js"><link rel="prefetch" href="/assets/js/46.6572ecd2.js"><link rel="prefetch" href="/assets/js/47.29c01931.js"><link rel="prefetch" href="/assets/js/48.c5d50761.js"><link rel="prefetch" href="/assets/js/49.eedeb413.js"><link rel="prefetch" href="/assets/js/5.d35fae6e.js"><link rel="prefetch" href="/assets/js/50.668aed89.js"><link rel="prefetch" href="/assets/js/51.fabbb73f.js"><link rel="prefetch" href="/assets/js/52.40199eb6.js"><link rel="prefetch" href="/assets/js/53.04341370.js"><link rel="prefetch" href="/assets/js/54.1ea7a647.js"><link rel="prefetch" href="/assets/js/55.d9a29e16.js"><link rel="prefetch" href="/assets/js/56.5a212b0d.js"><link rel="prefetch" href="/assets/js/57.557b132e.js"><link rel="prefetch" href="/assets/js/58.57f63c23.js"><link rel="prefetch" href="/assets/js/59.f9868ad9.js"><link rel="prefetch" href="/assets/js/6.cbbecb9e.js"><link rel="prefetch" href="/assets/js/60.d715511d.js"><link rel="prefetch" href="/assets/js/61.94f23e53.js"><link rel="prefetch" href="/assets/js/62.b9d0cd87.js"><link rel="prefetch" href="/assets/js/63.430b0804.js"><link rel="prefetch" href="/assets/js/64.64115894.js"><link rel="prefetch" href="/assets/js/65.862c29a4.js"><link rel="prefetch" href="/assets/js/66.1d742c87.js"><link rel="prefetch" href="/assets/js/67.85f2fac8.js"><link rel="prefetch" href="/assets/js/68.5433d095.js"><link rel="prefetch" href="/assets/js/69.4e1e27a1.js"><link rel="prefetch" href="/assets/js/7.58204c03.js"><link rel="prefetch" href="/assets/js/70.5ea3a9d1.js"><link rel="prefetch" href="/assets/js/71.76670aca.js"><link rel="prefetch" href="/assets/js/72.709e8ea7.js"><link rel="prefetch" href="/assets/js/73.36be2c03.js"><link rel="prefetch" href="/assets/js/74.3846c884.js"><link rel="prefetch" href="/assets/js/75.7645483b.js"><link rel="prefetch" href="/assets/js/76.fd3c307b.js"><link rel="prefetch" href="/assets/js/77.7be1ab20.js"><link rel="prefetch" href="/assets/js/78.32ab0068.js"><link rel="prefetch" href="/assets/js/79.efbbf8ab.js"><link rel="prefetch" href="/assets/js/8.abd032fa.js"><link rel="prefetch" href="/assets/js/80.9f10b4c0.js"><link rel="prefetch" href="/assets/js/81.451f32ee.js"><link rel="prefetch" href="/assets/js/82.722cb36d.js"><link rel="prefetch" href="/assets/js/83.f9528af6.js"><link rel="prefetch" href="/assets/js/84.47c73bff.js"><link rel="prefetch" href="/assets/js/85.b01e8c4a.js"><link rel="prefetch" href="/assets/js/86.c88eff6b.js"><link rel="prefetch" href="/assets/js/87.870c1ca3.js"><link rel="prefetch" href="/assets/js/88.1096db0d.js"><link rel="prefetch" href="/assets/js/89.9cc7fb66.js"><link rel="prefetch" href="/assets/js/9.5bf26188.js"><link rel="prefetch" href="/assets/js/90.e1df3db6.js"><link rel="prefetch" href="/assets/js/91.b58c4d10.js"><link rel="prefetch" href="/assets/js/92.f969419b.js"><link rel="prefetch" href="/assets/js/93.8490ac72.js"><link rel="prefetch" href="/assets/js/94.7d04723c.js"><link rel="prefetch" href="/assets/js/95.953295d7.js"><link rel="prefetch" href="/assets/js/96.4523f191.js"><link rel="prefetch" href="/assets/js/97.1f861b1b.js"><link rel="prefetch" href="/assets/js/98.86252b38.js"><link rel="prefetch" href="/assets/js/99.6c922fe1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.096ead02.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Snake8859</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link router-link-exact-active router-link-active">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link router-link-exact-active router-link-active">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="遥感图像处理方法"><a href="#遥感图像处理方法" class="header-anchor">#</a> 遥感图像处理方法</h1> <p>参考邓书斌老师的遥感图像处理方法。</p> <p><img src="/Major/RS/rs_operation.jpg" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02e74a2b.js" defer></script><script src="/assets/js/2.57c6d2f7.js" defer></script><script src="/assets/js/110.15fe31e1.js" defer></script>
+  </body>
+</html>

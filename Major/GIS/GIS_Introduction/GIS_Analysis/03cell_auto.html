@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>元胞自动机 | Snake8859</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/snake.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="Snake8859的文档和个人笔记">
+    <link rel="preload" href="/assets/css/0.styles.096ead02.css" as="style"><link rel="preload" href="/assets/js/app.02e74a2b.js" as="script"><link rel="preload" href="/assets/js/2.57c6d2f7.js" as="script"><link rel="preload" href="/assets/js/69.4e1e27a1.js" as="script"><link rel="prefetch" href="/assets/js/10.c2699515.js"><link rel="prefetch" href="/assets/js/100.e57e7729.js"><link rel="prefetch" href="/assets/js/101.baa01a63.js"><link rel="prefetch" href="/assets/js/102.1453dcb5.js"><link rel="prefetch" href="/assets/js/103.48c119dd.js"><link rel="prefetch" href="/assets/js/104.550d240d.js"><link rel="prefetch" href="/assets/js/105.b1180861.js"><link rel="prefetch" href="/assets/js/106.c5ccb84e.js"><link rel="prefetch" href="/assets/js/107.9682dff2.js"><link rel="prefetch" href="/assets/js/108.f1e82505.js"><link rel="prefetch" href="/assets/js/109.3598962f.js"><link rel="prefetch" href="/assets/js/11.53f16f31.js"><link rel="prefetch" href="/assets/js/110.15fe31e1.js"><link rel="prefetch" href="/assets/js/111.a0b10664.js"><link rel="prefetch" href="/assets/js/112.d3939d20.js"><link rel="prefetch" href="/assets/js/113.46e4835a.js"><link rel="prefetch" href="/assets/js/114.e55e2fb3.js"><link rel="prefetch" href="/assets/js/115.e06faf79.js"><link rel="prefetch" href="/assets/js/12.3c132a0b.js"><link rel="prefetch" href="/assets/js/13.41791305.js"><link rel="prefetch" href="/assets/js/14.cc4eaec7.js"><link rel="prefetch" href="/assets/js/15.4f4f189f.js"><link rel="prefetch" href="/assets/js/16.af6aed74.js"><link rel="prefetch" href="/assets/js/17.c8762897.js"><link rel="prefetch" href="/assets/js/18.c5dc67b3.js"><link rel="prefetch" href="/assets/js/19.86d202ed.js"><link rel="prefetch" href="/assets/js/20.e4189130.js"><link rel="prefetch" href="/assets/js/21.c7811963.js"><link rel="prefetch" href="/assets/js/22.d82eb4ed.js"><link rel="prefetch" href="/assets/js/23.5548e03a.js"><link rel="prefetch" href="/assets/js/24.8aad1281.js"><link rel="prefetch" href="/assets/js/25.356cd371.js"><link rel="prefetch" href="/assets/js/26.0a3dcd9a.js"><link rel="prefetch" href="/assets/js/27.08050082.js"><link rel="prefetch" href="/assets/js/28.fb22042e.js"><link rel="prefetch" href="/assets/js/29.03fccaf0.js"><link rel="prefetch" href="/assets/js/3.bde541ac.js"><link rel="prefetch" href="/assets/js/30.60a56dab.js"><link rel="prefetch" href="/assets/js/31.987d12a2.js"><link rel="prefetch" href="/assets/js/32.1adb2c8c.js"><link rel="prefetch" href="/assets/js/33.2108f876.js"><link rel="prefetch" href="/assets/js/34.cb778d11.js"><link rel="prefetch" href="/assets/js/35.bbf509e8.js"><link rel="prefetch" href="/assets/js/36.4378233a.js"><link rel="prefetch" href="/assets/js/37.0ae1fe21.js"><link rel="prefetch" href="/assets/js/38.51659462.js"><link rel="prefetch" href="/assets/js/39.26983312.js"><link rel="prefetch" href="/assets/js/4.de92bf2f.js"><link rel="prefetch" href="/assets/js/40.e7ac011c.js"><link rel="prefetch" href="/assets/js/41.b38b59a9.js"><link rel="prefetch" href="/assets/js/42.f13536bc.js"><link rel="prefetch" href="/assets/js/43.20016372.js"><link rel="prefetch" href="/assets/js/44.df5cefde.js"><link rel="prefetch" href="/assets/js/45.7f2bd9f7.js"><link rel="prefetch" href="/assets/js/46.6572ecd2.js"><link rel="prefetch" href="/assets/js/47.29c01931.js"><link rel="prefetch" href="/assets/js/48.c5d50761.js"><link rel="prefetch" href="/assets/js/49.eedeb413.js"><link rel="prefetch" href="/assets/js/5.d35fae6e.js"><link rel="prefetch" href="/assets/js/50.668aed89.js"><link rel="prefetch" href="/assets/js/51.fabbb73f.js"><link rel="prefetch" href="/assets/js/52.40199eb6.js"><link rel="prefetch" href="/assets/js/53.04341370.js"><link rel="prefetch" href="/assets/js/54.1ea7a647.js"><link rel="prefetch" href="/assets/js/55.d9a29e16.js"><link rel="prefetch" href="/assets/js/56.5a212b0d.js"><link rel="prefetch" href="/assets/js/57.557b132e.js"><link rel="prefetch" href="/assets/js/58.57f63c23.js"><link rel="prefetch" href="/assets/js/59.f9868ad9.js"><link rel="prefetch" href="/assets/js/6.cbbecb9e.js"><link rel="prefetch" href="/assets/js/60.d715511d.js"><link rel="prefetch" href="/assets/js/61.94f23e53.js"><link rel="prefetch" href="/assets/js/62.b9d0cd87.js"><link rel="prefetch" href="/assets/js/63.430b0804.js"><link rel="prefetch" href="/assets/js/64.64115894.js"><link rel="prefetch" href="/assets/js/65.862c29a4.js"><link rel="prefetch" href="/assets/js/66.1d742c87.js"><link rel="prefetch" href="/assets/js/67.85f2fac8.js"><link rel="prefetch" href="/assets/js/68.5433d095.js"><link rel="prefetch" href="/assets/js/7.58204c03.js"><link rel="prefetch" href="/assets/js/70.5ea3a9d1.js"><link rel="prefetch" href="/assets/js/71.76670aca.js"><link rel="prefetch" href="/assets/js/72.709e8ea7.js"><link rel="prefetch" href="/assets/js/73.36be2c03.js"><link rel="prefetch" href="/assets/js/74.3846c884.js"><link rel="prefetch" href="/assets/js/75.7645483b.js"><link rel="prefetch" href="/assets/js/76.fd3c307b.js"><link rel="prefetch" href="/assets/js/77.7be1ab20.js"><link rel="prefetch" href="/assets/js/78.32ab0068.js"><link rel="prefetch" href="/assets/js/79.efbbf8ab.js"><link rel="prefetch" href="/assets/js/8.abd032fa.js"><link rel="prefetch" href="/assets/js/80.9f10b4c0.js"><link rel="prefetch" href="/assets/js/81.451f32ee.js"><link rel="prefetch" href="/assets/js/82.722cb36d.js"><link rel="prefetch" href="/assets/js/83.f9528af6.js"><link rel="prefetch" href="/assets/js/84.47c73bff.js"><link rel="prefetch" href="/assets/js/85.b01e8c4a.js"><link rel="prefetch" href="/assets/js/86.c88eff6b.js"><link rel="prefetch" href="/assets/js/87.870c1ca3.js"><link rel="prefetch" href="/assets/js/88.1096db0d.js"><link rel="prefetch" href="/assets/js/89.9cc7fb66.js"><link rel="prefetch" href="/assets/js/9.5bf26188.js"><link rel="prefetch" href="/assets/js/90.e1df3db6.js"><link rel="prefetch" href="/assets/js/91.b58c4d10.js"><link rel="prefetch" href="/assets/js/92.f969419b.js"><link rel="prefetch" href="/assets/js/93.8490ac72.js"><link rel="prefetch" href="/assets/js/94.7d04723c.js"><link rel="prefetch" href="/assets/js/95.953295d7.js"><link rel="prefetch" href="/assets/js/96.4523f191.js"><link rel="prefetch" href="/assets/js/97.1f861b1b.js"><link rel="prefetch" href="/assets/js/98.86252b38.js"><link rel="prefetch" href="/assets/js/99.6c922fe1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.096ead02.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Snake8859</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link router-link-active">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专业" class="dropdown-title"><span class="title">专业</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          地信
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Introduction/" class="nav-link router-link-active">
+  地信导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Operation/" class="nav-link">
+  地信软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Programming/" class="nav-link">
+  地信编程
+</a></li><li class="dropdown-subitem"><a href="/Major/GIS/GIS_Resources/" class="nav-link">
+  地信资源
+</a></li></ul></li><li class="dropdown-item"><h4>
+          遥感
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Major/RS/RS_Introduction/" class="nav-link">
+  遥感导论和原理
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Operation/" class="nav-link">
+  遥感软件操作
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Programming/" class="nav-link">
+  遥感编程
+</a></li><li class="dropdown-subitem"><a href="/Major/RS/RS_Resources/" class="nav-link">
+  遥感资源
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发" class="dropdown-title"><span class="title">开发</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/FrontEnd/HTML_CSS_JS/" class="nav-link">
+  HTML/CSS/JS
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Vuejs/" class="nav-link">
+  Vuejs/Dojo
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/Nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/FrontEnd/MiniProgram/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/BackEnd/Java/" class="nav-link">
+  Java
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/DataBase/" class="nav-link">
+  数据库
+</a></li><li class="dropdown-subitem"><a href="/BackEnd/WebServer/" class="nav-link">
+  Web服务器
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/AI/Python/" class="nav-link">
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/EnvsAndTools/" class="nav-link">
+  开发环境与工具
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="研究" class="dropdown-title"><span class="title">研究</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/AI/DIP/" class="nav-link">
+  数字图像处理
+</a></li><li class="dropdown-item"><!----> <a href="/AI/PR/" class="nav-link">
+  模式识别导论
+</a></li><li class="dropdown-item"><!----> <a href="/AI/MachineLearning/" class="nav-link">
+  机器学习
+</a></li><li class="dropdown-item"><!----> <a href="/AI/DeepLearning/" class="nav-link">
+  深度学习
+</a></li></ul></div></div><div class="nav-item"><a href="/LifeAndTC/" class="nav-link">
+  生活与吐槽
+</a></div><div class="nav-item"><a href="/About/" class="nav-link">
+  关于
+</a></div> <a href="https://github.com/Snake8859/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>空间分析</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/" class="sidebar-link">空间分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/01spatial_statiscs.html" class="sidebar-link">空间统计分析基础</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/02cluster_analysis.html" class="sidebar-link">聚类分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html" class="active sidebar-link">元胞自动机</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html#元胞自动机的基本理论" class="sidebar-link">元胞自动机的基本理论</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html#元胞自动机的几种模型" class="sidebar-link">元胞自动机的几种模型</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html#元胞自动机在地理学中的应用" class="sidebar-link">元胞自动机在地理学中的应用</a></li><li class="sidebar-sub-header"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/03cell_auto.html#注意点" class="sidebar-link">注意点</a></li></ul></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/04random_filed_and_spatial_correlation.html" class="sidebar-link">随机场的空间相关</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/05variation_function.html" class="sidebar-link">变差函数和结构分析</a></li><li><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/06kriging_interpolation.html" class="sidebar-link">克里金插值</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="元胞自动机"><a href="#元胞自动机" class="header-anchor">#</a> 元胞自动机</h1> <h2 id="元胞自动机的基本理论"><a href="#元胞自动机的基本理论" class="header-anchor">#</a> 元胞自动机的基本理论</h2> <p>定义：<strong>元胞自动机是一种由细小元胞构成的空间和时间都离散的动力系统，它利用微观的规则、时空离散的状态来模拟宏观的规律和特征。</strong></p> <p>特点：</p> <ul><li>元胞自动机是微观的，局部的模型</li> <li>元胞自动机是离散的动力学模型</li> <li>元胞自动机运行是基于微观的碰撞规则</li> <li>同质性、齐性：同质性反映元胞空间内每个元胞变化都服从相同的规律；而齐性是指元胞的分布方式相同、大小、形状相同</li> <li>离散的（时间、空间、状态）动力学模型</li> <li>同步计算（并行性）</li> <li>时空局部性</li></ul> <p>分类：<strong>元胞自动机可以按维数和元胞的类型分类，也可按动力学行为进行分类</strong></p> <ul><li>平稳型</li> <li>周期型</li> <li>混沌型</li> <li>复杂型</li></ul> <p>也可以按元胞的形状：</p> <ul><li>正方形</li> <li>正六边形</li> <li>正三角形</li></ul> <blockquote><p>满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mn>2</mn><mi>N</mi></mrow><mrow><mi>N</mi><mo>−</mo><mn>2</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{2N}{N-2}</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height:0.872331em;"></span><span class="strut bottom" style="height:1.275662em;vertical-align:-0.403331em;"></span><span class="base textstyle uncramped"><span class="mord reset-textstyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mbin">−</span><span class="mord mathrm">2</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord mathrm">2</span><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span>，其中N必须要整数，解也要整理，则满足的有N=3,4,6</p></blockquote> <h2 id="元胞自动机的几种模型"><a href="#元胞自动机的几种模型" class="header-anchor">#</a> 元胞自动机的几种模型</h2> <ul><li>生命游戏</li> <li>交通流模型</li> <li>林火模型</li></ul> <blockquote><p>思路：每一个元胞状态之于前后状态的有关系</p></blockquote> <h2 id="元胞自动机在地理学中的应用"><a href="#元胞自动机在地理学中的应用" class="header-anchor">#</a> 元胞自动机在地理学中的应用</h2> <ul><li>火山爆发</li> <li>构造运动</li> <li>变质作用</li> <li>对城市交通流的模拟</li> <li>森林火灾的模拟</li> <li>城市土地利用的模拟</li> <li>城市增长的模拟</li></ul> <h2 id="注意点"><a href="#注意点" class="header-anchor">#</a> 注意点</h2> <ul><li>简单性和真实性的矛盾问题</li> <li>时空划分问题</li> <li>微观规则和宏观规则的转换问题</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Major/GIS/GIS_Introduction/GIS_Analysis/02cluster_analysis.html" class="prev">
+        聚类分析
+      </a></span> <span class="next"><a href="/Major/GIS/GIS_Introduction/GIS_Analysis/04random_filed_and_spatial_correlation.html">
+        随机场的空间相关
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02e74a2b.js" defer></script><script src="/assets/js/2.57c6d2f7.js" defer></script><script src="/assets/js/69.4e1e27a1.js" defer></script>
+  </body>
+</html>
